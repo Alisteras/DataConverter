@@ -47,3 +47,10 @@ jobs:
     - name: Test
       working-directory: build
       run: ctest --output-on-failure -C Release
+
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results-${{ matrix.os }}
+        path: ctest_log_${{ matrix.os }}.txt
