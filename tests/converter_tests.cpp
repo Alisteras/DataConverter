@@ -72,7 +72,6 @@ TEST(Converter, EmptyCsvProducesEmptyArray) {
     EXPECT_TRUE(result.is_array());
     EXPECT_TRUE(result.empty());
 }
-
-TEST(Converter, FailFastExperiment) {
-    EXPECT_EQ(1, 2); // Это утверждение ложно, тест упадёт
-}
+//TEST(Converter, FailFastExperiment) {
+//    EXPECT_EQ(1, 2); // Это утверждение ложно, тест упадёт
+//}
